@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TorqueFRCScouting</string>
+    <string name="text_entry_box_message">Enter Your Phone Number</string>
+    <string name="text_submit_button_text">Submit</string>
 </resources>

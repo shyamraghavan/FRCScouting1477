@@ -3,5 +3,12 @@
           package="com.texastorque.TorqueFRCScouting">
     <uses-sdk android:minSdkVersion="16"/>
     <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".BackgroundActivity" android:label="background_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".SendData" android:label="send_data"/>
     </application>
 </manifest>
