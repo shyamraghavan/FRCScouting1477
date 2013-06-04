@@ -12,6 +12,9 @@ import android.widget.EditText;
  * Date: 6/3/13
  * Time: 1:28 PM
  */
+
+//TODO: doesn't show anything for activity
+
 public class BackgroundActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
