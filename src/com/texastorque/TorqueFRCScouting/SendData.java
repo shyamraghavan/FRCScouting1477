@@ -14,6 +14,7 @@ public class SendData extends Activity {
 
     String user_entered_message;
 
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         new BackgroundActivity().setup(savedInstanceState);
