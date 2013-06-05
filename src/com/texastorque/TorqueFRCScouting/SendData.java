@@ -1,6 +1,7 @@
 package com.texastorque.TorqueFRCScouting;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 /**
@@ -10,7 +11,14 @@ import android.os.Bundle;
  * Time: 4:51 PM
  */
 public class SendData extends Activity {
+
+    String user_entered_message;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        new BackgroundActivity().setup(savedInstanceState);
+
+        Intent createIntent = getIntent();
+        user_entered_message = createIntent.getStringExtra("com.texastorque.TorqueFRCScouting.user_entered_message");
     }
 }

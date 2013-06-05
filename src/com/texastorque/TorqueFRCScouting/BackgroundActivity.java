@@ -13,11 +13,10 @@ import android.widget.EditText;
  * Time: 1:28 PM
  */
 
-//TODO: doesn't show anything for activity
-
 public class BackgroundActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.background_activity);
     }
 
     public void buttonClick(View view){
@@ -28,5 +27,9 @@ public class BackgroundActivity extends Activity {
         sendDataIntent.putExtra("com.texastorque.TorqueFRCScouting.user_entered_message",user_entered_message.getText());
 
         startActivity(sendDataIntent);
+    }
+
+    public void setup(Bundle savedInstanceState){
+        super.setTitle(R.string.app_name);
     }
 }
