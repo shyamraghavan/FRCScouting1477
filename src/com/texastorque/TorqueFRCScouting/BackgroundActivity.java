@@ -17,6 +17,7 @@ public class BackgroundActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setup(savedInstanceState);
         setContentView(R.layout.background_activity);
     }
 

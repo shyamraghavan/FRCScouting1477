@@ -3,6 +3,7 @@ package com.texastorque.TorqueFRCScouting;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,32 +20,23 @@ import java.net.*;
 public class SendData extends Activity {
 
     String user_entered_message;
-
-    public SendData() throws URISyntaxException,FileNotFoundException {
-        System.setErr(new PrintStream(new FileOutputStream(new File(new URI("192.168.1.253:156/com/texastorque/TorqueFRCScouting/output.txt")))));
-    }
+    TextView textView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new BackgroundActivity().setup(savedInstanceState);
 
         Intent createIntent = getIntent();
         user_entered_message = createIntent.getStringExtra("com.texastorque.TorqueFRCScouting.user_entered_message");
 
         networkConnection();
-
-        System.err.println("This is a test of err output stream");
+        setContentView(textView);
     }
 
     private void networkConnection() {
+        textView = new TextView(this);
 
-        try{
-            URL connectionURL = new URL("udp","192.168.1.253",156,"com/texastorque/TorqueFRCScouting/data.txt");
-        }
-        catch(Exception exc){
-            System.err.println(exc);
-        }
-
+        textView.setTextSize(60);
+        textView.setText(user_entered_message);
     }
 }

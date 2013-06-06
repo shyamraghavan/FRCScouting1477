@@ -3,4 +3,5 @@
     <string name="app_name">TexasTorqueFRCScouting</string>
     <string name="text_entry_box_message">Enter Your Phone Number</string>
     <string name="text_submit_button_text">Submit</string>
+    <string name="defaultPhone">555-555-5555</string>
 </resources>
