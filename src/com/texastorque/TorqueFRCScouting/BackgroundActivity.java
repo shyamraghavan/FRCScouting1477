@@ -26,7 +26,7 @@ public class BackgroundActivity extends Activity {
 
         EditText user_entered_message = (EditText) findViewById(R.id.text_entry_box);
 
-        sendDataIntent.putExtra("com.texastorque.TorqueFRCScouting.user_entered_message",user_entered_message.getText());
+        sendDataIntent.putExtra("com.texastorque.TorqueFRCScouting.user_entered_message",user_entered_message.getText().toString());
 
         startActivity(sendDataIntent);
     }
