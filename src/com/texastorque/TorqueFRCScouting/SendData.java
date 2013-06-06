@@ -25,6 +25,10 @@ public class SendData extends Activity {
         setContentView(textView);
     }
 
+    /*
+    Used to develop network connection to transfer information
+     */
+
     private void networkConnection() {
         textView = new TextView(this);
 
