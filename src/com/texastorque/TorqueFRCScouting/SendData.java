@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import java.net.HttpURLConnection;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Shyam Raghavan
@@ -21,5 +23,7 @@ public class SendData extends Activity {
 
         Intent createIntent = getIntent();
         user_entered_message = createIntent.getStringExtra("com.texastorque.TorqueFRCScouting.user_entered_message");
+
+        HttpURLConnection
     }
 }
