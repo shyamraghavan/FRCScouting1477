@@ -16,11 +16,22 @@
               android:inputType="phone"
               android:hint="@string/text_entry_box_message" />
 
-    <Button android:id="@+id/text_submit_button"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/text_submit_button_text"
-            android:onClick="buttonClick" />
+    <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+        <Spinner android:id="@+id/state_spinner"
+                 android:layout_height="wrap_content"
+                 android:layout_width="200dp"
+                 android:layout_marginRight="@id/text_submit_button"
+                 android:layout_alignParentLeft="true" />
+
+        <Button android:id="@+id/text_submit_button"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/text_submit_button_text"
+                android:layout_alignParentRight="true"
+                android:onClick="buttonClick" />
+
+    </RelativeLayout>
 
 </LinearLayout>

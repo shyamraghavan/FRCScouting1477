@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 /**
  * Created with IntelliJ IDEA.
@@ -33,5 +35,11 @@ public class BackgroundActivity extends Activity {
 
     public void setup(Bundle savedInstanceState){
         super.setTitle(R.string.app_name);
+
+        Spinner spinner = (Spinner) findViewById(R.id.state_spinner);
+
+        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,R.array.spinner_text_array,R.id.state_spinner);
+
+        spinner.setAdapter(arrayAdapter);
     }
 }
