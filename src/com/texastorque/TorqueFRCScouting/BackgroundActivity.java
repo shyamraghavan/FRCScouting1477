@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
+
+//TODO if not using spinner, delete these import statements
+/*import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
+import android.widget.SpinnerAdapter;*/
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,8 +20,9 @@ import android.widget.SpinnerAdapter;
 
 public class BackgroundActivity extends Activity {
 
-    private SpinnerAdapter arrayAdapter;
-    private Spinner spinner;
+    //TODO if not using spinner, delete these declarations
+    /*private SpinnerAdapter arrayAdapter;
+    private Spinner spinner;*/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,11 +44,14 @@ public class BackgroundActivity extends Activity {
         startActivity(sendDataIntent);
     }
 
+    /*
+    @param savedInstanceState Used for transferring information to setup method
+     */
     public void setup(Bundle savedInstanceState){
         super.setTitle(R.string.app_name);
 
-        spinner = (Spinner) findViewById(R.id.state_spinner);
-
-        arrayAdapter = ArrayAdapter.createFromResource(this,R.array.spinner_text_array,R.id.state_spinner);
+        //TODO if not using spinner, delete these lines of code
+        /*spinner = (Spinner) findViewById(R.id.state_spinner);
+        arrayAdapter = ArrayAdapter.createFromResource(this,R.array.spinner_text_array,R.id.state_spinner); */
     }
 }
