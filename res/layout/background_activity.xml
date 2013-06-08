@@ -26,11 +26,11 @@
                 android:layout_alignParentRight="true"
                 android:onClick="buttonClick" />
 
-        <Spinner android:id="@+id/state_spinner"
+        <!--<Spinner android:id="@+id/state_spinner"
                  android:layout_height="wrap_content"
                  android:layout_width="200dp"
                  android:layout_toLeftOf="@id/text_submit_button"
-                 android:layout_alignParentLeft="true" />
+                 android:layout_alignParentLeft="true" />-->
 
     </RelativeLayout>
 
