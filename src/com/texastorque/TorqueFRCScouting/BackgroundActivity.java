@@ -4,12 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
-<<<<<<< HEAD
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
-=======
->>>>>>> parent of 7e41339... added spinner with states
 
 /**
  * Created with IntelliJ IDEA.
@@ -28,7 +26,7 @@ public class BackgroundActivity extends Activity {
         super.onCreate(savedInstanceState);
         setup(savedInstanceState);
 
-        spinner.setAdapter(arrayAdapter);
+        //spinner.setAdapter(arrayAdapter);
 
         setContentView(R.layout.background_activity);
     }
@@ -45,12 +43,9 @@ public class BackgroundActivity extends Activity {
 
     public void setup(Bundle savedInstanceState){
         super.setTitle(R.string.app_name);
-<<<<<<< HEAD
 
         spinner = (Spinner) findViewById(R.id.state_spinner);
 
         arrayAdapter = ArrayAdapter.createFromResource(this,R.array.spinner_text_array,R.id.state_spinner);
-=======
->>>>>>> parent of 7e41339... added spinner with states
     }
 }
