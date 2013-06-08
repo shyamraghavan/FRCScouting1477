@@ -9,6 +9,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Shyam Raghavan
@@ -26,7 +31,12 @@ public class BackgroundActivity extends Activity {
         super.onCreate(savedInstanceState);
         setup(savedInstanceState);
 
-        //spinner.setAdapter(arrayAdapter);
+        try{
+            spinner.setAdapter(arrayAdapter);
+        }
+        catch(Exception exe){
+            appendLog(exe.toString());
+        }
 
         setContentView(R.layout.background_activity);
     }
@@ -47,5 +57,32 @@ public class BackgroundActivity extends Activity {
         spinner = (Spinner) findViewById(R.id.state_spinner);
 
         arrayAdapter = ArrayAdapter.createFromResource(this,R.array.spinner_text_array,R.id.state_spinner);
+    }
+
+    public void appendLog(String text)
+    {
+        File logFile = new File("sdcard/log.file");
+        if (!logFile.exists())
+        {
+            try
+            {
+                logFile.createNewFile();
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        try
+        {
+            BufferedWriter buf = new BufferedWriter(new FileWriter(logFile, true));
+            buf.append(text);
+            buf.newLine();
+            buf.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 }
